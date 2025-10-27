@@ -3,8 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import InstallPWA from "../components/InstallPWA";
 import UpdateNotification from "../components/UpdateNotification";
+import { useEffect } from "react";
+import InstallPWA from "../components/InstallPWA";
+import PWAWelcomeModal from "../components/PWAWelcomeModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +18,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Metadata بدون themeColor
 export const metadata: Metadata = {
   title: "TSTCommerce - Your Trusted Online Store",
   description:
@@ -74,6 +75,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <InstallPWA />
         <UpdateNotification />
       </body>
     </html>

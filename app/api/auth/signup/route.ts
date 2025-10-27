@@ -1,7 +1,7 @@
 // app/api/auth/signup/route.ts
 
 import { NextResponse } from "next/server";
-import { getPrismaClient } from "@/lib/prisma"; // <-- 1. استيراد الفانكشن الجديدة
+import { getPrismaClient } from "@/lib/prisma"; 
 import * as bcrypt from "bcryptjs";
 
 export const dynamic = 'force-dynamic';

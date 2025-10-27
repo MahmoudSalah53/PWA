@@ -8,6 +8,9 @@
   "theme_color": "#000000",
   "orientation": "portrait-primary",
   "scope": "/",
+  "launch_handler": {
+  "client_mode": "navigate-existing"
+},
   "icons": [
     {
       "src": "/icon-512x512.png",
