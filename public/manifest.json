@@ -1,0 +1,38 @@
+{
+  "name": "TSTCommerce - Your Trusted Online Store",
+  "short_name": "TSTCommerce",
+  "description": "Shop for quality products with fast shipping and excellent customer service",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "72x72 96x96 128x128 144x144 152x152 192x192 384x384 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "description": "Go to home page",
+      "url": "/",
+      "icons": [{ "src": "/icon-512x512.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Products",
+      "short_name": "Products",
+      "description": "Browse products",
+      "url": "/products",
+      "icons": [{ "src": "/icon-512x512.png", "sizes": "96x96" }]
+    }
+  ],
+  "categories": ["shopping", "ecommerce"],
+  "dir": "ltr",
+  "lang": "en"
+}
