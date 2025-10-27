@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import UpdateNotification from "../components/UpdateNotification";
 import { useEffect } from "react";
 import InstallPWA from "../components/InstallPWA";
-import PWAWelcomeModal from "../components/PWAWelcomeModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
