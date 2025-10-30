@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import UpdateNotification from "../components/UpdateNotification";
 import { useEffect } from "react";
 import InstallPWA from "../components/InstallPWA";
+import VoiceAgent from "@/components/VoiceAgent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,6 +77,7 @@ export default function RootLayout({
         <Footer />
         <InstallPWA />
         <UpdateNotification />
+        <VoiceAgent />
       </body>
     </html>
   );
