@@ -244,57 +244,6 @@ export default function VoiceAgent() {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        @keyframes wave {
-          0%, 100% {
-            transform: scaleY(0.3);
-          }
-          50% {
-            transform: scaleY(1);
-          }
-        }
-
-        @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        .animate-wave {
-          animation: wave 0.8s ease-in-out infinite;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.3s ease-out;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-
-        .animation-delay-200 {
-          animation-delay: 200ms;
-        }
-
-        .animation-delay-400 {
-          animation-delay: 400ms;
-        }
-      `}</style>
     </>
   );
 }
