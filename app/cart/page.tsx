@@ -29,7 +29,7 @@ export default function CartPage() {
               Add some items to your cart to get started!
             </p>
             <button
-              onClick={() => router.push("/products")}
+              onClick={() => router.push("/services")}
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Browse Products

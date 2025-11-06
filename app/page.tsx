@@ -20,7 +20,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4 justify-center">
               <Link
-                href="/products"
+                href="/services"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Shop Now
@@ -44,7 +44,7 @@ export default function Home() {
               Featured Products
             </h2>
             <Link
-              href="/products"
+              href="/services"
               className="text-blue-600 hover:text-blue-800 font-semibold"
             >
               View All →

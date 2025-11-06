@@ -118,7 +118,7 @@ export default function ProfilePage() {
                   Order History
                 </h2>
                 <Link
-                  href="/products"
+                  href="/services"
                   className="text-sm text-blue-600 hover:text-blue-800 font-semibold"
                 >
                   Continue Shopping →
@@ -140,7 +140,7 @@ export default function ProfilePage() {
                     Start shopping to see your order history here
                   </p>
                   <Link
-                    href="/products"
+                    href="/services"
                     className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Browse Products

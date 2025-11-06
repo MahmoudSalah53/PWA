@@ -19,12 +19,9 @@ body {
 }
 
 @keyframes gradient-x {
-
-  0%,
-  100% {
+  0%, 100% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
@@ -36,12 +33,9 @@ body {
 }
 
 @keyframes wave {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: scaleY(0.3);
   }
-
   50% {
     transform: scaleY(1);
   }
@@ -52,7 +46,6 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -63,11 +56,89 @@ body {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
+
+/* ==================== Siri Animations ==================== */
+
+/* Sphere pulsing glow */
+@keyframes sphereGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(6, 182, 212, 0.7));
+  }
+}
+
+/* Layer rotations - different speeds and directions */
+@keyframes layerRotate1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes layerRotate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes layerRotate3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes layerRotate4 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Core pulsing */
+@keyframes corePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Highlight drift for glossy effect */
+@keyframes highlightDrift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(3px, -3px);
+  }
+  50% {
+    transform: translate(0, -5px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+}
+
+/* ==================== End Siri Animations ==================== */
 
 .animate-wave {
   animation: wave 0.8s ease-in-out infinite;

@@ -83,8 +83,8 @@ export default function InstallPWA() {
   if (!showInstall || isInstalled) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50 max-w-sm">
-      <div className="relative animate-slide-in-right">
+    <div className="fixed bottom-28 right-6 z-40 max-w-sm">
+      <div className="relative animate-slide-up">
         {/* Background with glassmorphism effect */}
         <div className="relative bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 backdrop-blur-xl border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden">
           {/* Glow effect */}
@@ -139,14 +139,14 @@ export default function InstallPWA() {
       </div>
 
       <style jsx>{`
-        @keyframes slide-in-right {
+        @keyframes slide-up {
           from {
             opacity: 0;
-            transform: translateX(100%);
+            transform: translateY(20px);
           }
           to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
           }
         }
 
@@ -159,8 +159,8 @@ export default function InstallPWA() {
           }
         }
 
-        .animate-slide-in-right {
-          animation: slide-in-right 0.5s ease-out;
+        .animate-slide-up {
+          animation: slide-up 0.5s ease-out;
         }
 
         .animate-bounce-slow {

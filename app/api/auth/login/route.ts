@@ -49,8 +49,18 @@ export async function POST(request: Request) {
     return NextResponse.json(userWithoutPassword);
   } catch (error) {
     console.error("Login error:", error);
+    
+    // Better error logging
+    if (error instanceof Error) {
+      console.error("Error details:", error.message);
+      console.error("Stack:", error.stack);
+    }
+    
     return NextResponse.json(
-      { message: "Internal server error" },
+      { 
+        message: "Internal server error",
+        error: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined
+      },
       { status: 500 }
     );
   }

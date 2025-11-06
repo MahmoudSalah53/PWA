@@ -22,8 +22,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <Link href={`/products/${product.id}`}>
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+      <Link href={`/services/${product.id}`}>
         <div className="relative h-48 w-full">
           <Image
             src={product.image}
@@ -35,38 +35,44 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </Link>
 
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
+        {/* Category */}
         <div className="flex items-center mb-2">
           <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
             {product.category}
           </span>
         </div>
 
-        <Link href={`/products/${product.id}`}>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2 hover:text-blue-600">
+        {/* Title */}
+        <Link href={`/services/${product.id}`}>
+          <h3 className="text-lg font-semibold text-gray-800 mb-2 hover:text-blue-600 min-h-[3.5rem] line-clamp-2">
             {product.name}
           </h3>
         </Link>
 
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+        {/* Description */}
+        <p className="text-gray-600 text-sm mb-4 line-clamp-2 min-h-[2.5rem] flex-grow">
           {product.description}
         </p>
 
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-gray-800">
-            ${product.price.toFixed(2)}
-          </span>
-
+        {/* Price & Button - Fixed at bottom */}
+        <div className="mt-auto pt-4 border-t border-gray-100">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-2xl font-bold text-blue-600">
+              ${product.price.toFixed(2)}
+            </span>
+          </div>
+          
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock || isAdding}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+            className={`w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-all duration-300 ${
               product.inStock && !isAdding
-                ? "bg-blue-600 text-white hover:bg-blue-700"
+                ? "bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg transform hover:scale-105"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
             }`}
           >
-            <FiShoppingCart />
+            <FiShoppingCart className="w-4 h-4" />
             {isAdding
               ? "Added!"
               : product.inStock

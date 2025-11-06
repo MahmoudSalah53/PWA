@@ -19,8 +19,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/products" className="hover:text-white">
-                  Products
+                <a href="/services" className="hover:text-white">
+                  Services
                 </a>
               </li>
               <li>
@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a
-                  href="/products?category=Electronics"
+                  href="/services?category=Electronics"
                   className="hover:text-white"
                 >
                   Electronics
@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products?category=Accessories"
+                  href="/services?category=Accessories"
                   className="hover:text-white"
                 >
                   Accessories

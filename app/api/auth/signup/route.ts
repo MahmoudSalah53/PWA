@@ -11,9 +11,9 @@ export async function POST(request: Request) {
   try {
     const { email, password, name } = await request.json();
 
-    if (!email || !password || !name) {
+    if (!email || !password) {
       return NextResponse.json(
-        { message: "Name, email, and password are required" },
+        { message: "Email and password are required" },
         { status: 400 }
       );
     }
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     // Create new user
     const newUser = await prisma.user.create({
       data: {
-        name,
+        name: name || null,
         email,
         password: hashedPassword,
       },
@@ -48,14 +48,21 @@ export async function POST(request: Request) {
     // Return user data without password
     const { password: _, ...userWithoutPassword } = newUser;
 
-    return NextResponse.json(
-      { message: "User created successfully", user: userWithoutPassword },
-      { status: 201 } // 201 Created
-    );
+    return NextResponse.json(userWithoutPassword);
   } catch (error) {
     console.error("Signup error:", error);
+    
+    // Better error logging
+    if (error instanceof Error) {
+      console.error("Error details:", error.message);
+      console.error("Stack:", error.stack);
+    }
+    
     return NextResponse.json(
-      { message: "Internal server error" },
+      { 
+        message: "Internal server error",
+        error: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined
+      },
       { status: 500 }
     );
   }
