@@ -1,0 +1,40 @@
+{
+  "name": "@voiceagent/webcomponent",
+  "version": "2.0.0",
+  "description": "Voice Agent Web Component - Built with Lit",
+  "main": "dist/voice-agent.js",
+  "module": "dist/voice-agent.js",
+  "types": "dist/voice-agent.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "mock-api": "node mock-server.js"
+  },
+  "keywords": [
+    "web-component",
+    "voice",
+    "ai",
+    "livekit",
+    "lit"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^3.1.0",
+    "livekit-client": "^2.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "livekit-server-sdk": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0"
+  }
+}
+
